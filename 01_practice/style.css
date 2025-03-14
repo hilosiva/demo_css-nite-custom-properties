@@ -1,0 +1,98 @@
+/* Header */
+.header {
+  padding-block: clamp(1.5rem, 0.9718rem + 2.2535vi, 3rem);
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
+
+/* Footer */
+.footer {
+  padding-block: clamp(1.5rem, 0.9718rem + 2.2535vi, 3rem);
+}
+
+/* Container */
+.container {
+  padding-inline: 10vi;
+}
+
+/* Grid */
+.grid {
+  display: block grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  gap: clamp(1.5rem, 0.9718rem + 2.2535vi, 3rem);
+}
+
+/* Section */
+.section {
+  margin-block-start: clamp(1.5rem, 0.9718rem + 2.2535vi, 3rem);
+}
+
+.section-cover {
+  aspect-ratio: 1.618 / 1;
+
+  img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Heading */
+.headline {
+  font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+}
+
+/* Contents */
+.contents {
+  display: block grid;
+  row-gap: clamp(1rem, 0.6479rem + 1.5023vi, 2rem);
+  margin-block-start: clamp(1rem, 0.6479rem + 1.5023vi, 2rem);
+}
+
+.contents-title {
+  font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+}
+
+/* Content */
+.content {
+  display: block grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
+  gap: clamp(1.5rem, 0.9718rem + 2.2535vi, 3rem);
+}
+
+.content-cover {
+  aspect-ratio: 1.414 / 1;
+
+  img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+
+  .content:nth-child(odd) & {
+    order: 1;
+  }
+}
+
+.content-title {
+  font-size: 1.25rem;
+}
+
+/* Box */
+.box {
+  container: box / inline-size;
+  display: block grid;
+  place-content: center;
+  aspect-ratio: 1;
+
+  span {
+    font-size: clamp(1.5rem, 0.5rem + 6.6667cqi, 2.5rem);
+    font-weight: 900;
+  }
+}
+
+:where(p) {
+  margin-block: 2em;
+}
