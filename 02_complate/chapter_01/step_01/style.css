@@ -1,7 +1,7 @@
 /* Base */
 :root {
   /* Color */
-  --color-dark: #18181B;
+  --color-dark: #18181b;
   --color-light: #e0e0e0;
 
   /* Font Family */
@@ -56,7 +56,7 @@
 }
 
 /* Heading */
-.headline {
+.heading {
   font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
 }
 
