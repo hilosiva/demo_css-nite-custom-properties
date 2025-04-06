@@ -80,7 +80,7 @@
 .grid {
   display: block grid;
   grid-template-columns: repeat(var(--grid-cols, 1), minmax(var(--grid-min-size, 0), 1fr));
-  gap: var(--gap, 0);
+  gap: var(--grid-gap, 0);
 }
 
 /* Section */
@@ -117,7 +117,7 @@
 
 /* Content */
 .content {
-  --gap: var(--space-lg);
+  --grid-gap: var(--space-lg);
 
   @media (width >= 48rem) {
     --grid-cols: 2;
@@ -143,10 +143,10 @@
 }
 
 /* Box */
-.boxs {
+.boxes {
   --grid-cols: auto-fit;
   --grid-min-size: min(15rem, 100%);
-  --gap: var(--space-lg);
+  --grid-gap: var(--space-lg);
 }
 
 .box {

@@ -79,24 +79,26 @@
 /* Grid */
 .grid {
   --grid-cols-sm: 1;
-  --gap-sm: 0;
+  --grid-gap-sm: 0;
+  --grid-cols: var(--grid-cols-sm);
+  --grid-gap: var(--grid-gap-sm);
 
   display: block grid;
-  grid-template-columns: repeat(var(--grid-cols, var(--grid-cols-sm)), minmax(var(--grid-min-size, 0), 1fr));
-  gap: var(--gap, var(--gap-sm));
+  grid-template-columns: repeat(var(--grid-cols), minmax(var(--grid-min-size, 0), 1fr));
+  gap: var(--grid-gap);
 
   @media (width >= 48rem) {
     --grid-cols-md: var(--grid-cols-sm);
-    --gap-md: var(--gap-sm);
+    --grid-gap-md: var(--grid-gap-sm);
     --grid-cols: var(--grid-cols-md);
-    --gap: var(--gap-md);
+    --grid-gap: var(--grid-gap-md);
   }
 
   @media (width >= 64rem) {
     --grid-cols-lg: var(--grid-cols-md);
-    --gap-lg: var(--gap-md);
+    --grid-gap-lg: var(--grid-gap-md);
     --grid-cols: var(--grid-cols-lg);
-    --gap: var(--gap-lg);
+    --grid-gap: var(--grid-gap-lg);
   }
 }
 
@@ -134,7 +136,7 @@
 
 /* Content */
 .content {
-  --gap: var(--space-lg);
+  --grid-gap: var(--space-lg);
   --grid-cols-md: 2;
 }
 
@@ -157,10 +159,10 @@
 }
 
 /* Box */
-.boxs {
+.boxes {
   --grid-cols: auto-fit;
   --grid-min-size: min(15rem, 100%);
-  --gap: var(--space-lg);
+  --grid-gap: var(--space-lg);
 }
 
 .box {

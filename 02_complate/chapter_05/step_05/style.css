@@ -86,53 +86,56 @@
   /* Grid */
   .grid {
     --grid-cols-sm: 1;
-    --gap-sm: 0;
+    --grid-gap-sm: 0;
+    --grid-cols: var(--grid-cols-sm);
+    --grid-gap: var(--grid-gap-sm);
 
     display: block grid;
-    grid-template-columns: repeat(var(--grid-cols, var(--grid-cols-sm)), minmax(var(--grid-min-size, 0), 1fr));
-    gap: var(--gap, var(--gap-sm));
+    grid-template-columns: repeat(var(--grid-cols), minmax(var(--grid-min-size, 0), 1fr));
+    gap: var(--grid-gap);
 
     @media (width >= 48rem) {
       --grid-cols-md: var(--grid-cols-sm);
-      --gap-md: var(--gap-sm);
+      --grid-gap-md: var(--grid-gap-sm);
       --grid-cols: var(--grid-cols-md);
-      --gap: var(--gap-md);
+      --grid-gap: var(--grid-gap-md);
     }
 
     @media (width >= 64rem) {
       --grid-cols-lg: var(--grid-cols-md);
-      --gap-lg: var(--gap-md);
+      --grid-gap-lg: var(--grid-gap-md);
       --grid-cols: var(--grid-cols-lg);
-      --gap: var(--gap-lg);
+      --grid-gap: var(--grid-gap-lg);
     }
 
     & > * {
       --grid-col-sm: auto;
       --grid-row-sm: auto;
-      --order-sm: 0;
+      --grid-order-sm: 0;
+      --grid-col: var(--grid-col-sm);
+      --grid-row: var(--grid-row-sm);
+      --grid-order: var(--grid-order-sm);
 
-      grid-column: var(--grid-col, var(--grid-col-sm));
-      grid-row: var(--grid-row, var(--grid-row-sm));
-      order: var(--order, var(--order-sm));
+      grid-column: var(--grid-col);
+      grid-row: var(--grid-row);
+      order: var(--grid-order);
 
       @media (width >= 48rem) {
         --grid-col-md: var(--grid-col-sm);
         --grid-row-md: var(--grid-row-sm);
-        --order-md: var(--order-sm);
-
+        --grid-order-md: var(--grid-order-sm);
         --grid-col: var(--grid-col-md);
         --grid-row: var(--grid-row-md);
-        --order: var(--order-md);
+        --grid-order: var(--grid-order-md);
       }
 
       @media (width >= 64rem) {
         --grid-col-lg: var(--grid-col-md);
         --grid-row-lg: var(--grid-row-md);
-        --order-lg: var(--order-md);
-
+        --grid-order-lg: var(--grid-order-md);
         --grid-col: var(--grid-col-lg);
         --grid-row: var(--grid-row-lg);
-        --order: var(--order-lg);
+        --grid-order: var(--grid-order-lg);
       }
     }
   }
@@ -173,7 +176,7 @@
 
   /* Content */
   .content {
-    --gap: var(--space-lg);
+    --grid-gap: var(--space-lg);
     --grid-cols-md: 2;
   }
 
@@ -187,7 +190,7 @@
     }
 
     .content:nth-child(odd) & {
-      --order-md: 1;
+      --grid-order-md: 1;
     }
   }
 
