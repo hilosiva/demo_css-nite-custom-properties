@@ -1,3 +1,8 @@
+/* General */
+:where(p) {
+  margin-block: 2em;
+}
+
 /* Header */
 .header {
   padding-block: clamp(1.5rem, 0.9718rem + 2.2535vi, 3rem);
@@ -91,8 +96,4 @@
     font-size: clamp(1.5rem, 0.5rem + 6.6667cqi, 2.5rem);
     font-weight: 900;
   }
-}
-
-:where(p) {
-  margin-block: 2em;
 }

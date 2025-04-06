@@ -1,7 +1,7 @@
 /* Base */
 :root {
   /* Transformer */
-  --torem: calc(1rem / 16);
+  --to-rem: calc(1rem / 16);
 
   /* Color */
   --color-dark: #18181b;
@@ -11,14 +11,14 @@
   --font-sans: "Inter", sans-serif;
 
   /* Font Size */
-  --font-size-lg: calc(20 * var(--torem));
-  --font-size-xl: calc(24 * var(--torem));
-  --font-size-2xl: clamp(24 * var(--torem), 1.3239rem + 0.7512vi, 32 * var(--torem));
-  --font-size-3xl: clamp(32 * var(--torem), 1.8239rem + 0.7512vi, 40 * var(--torem));
+  --font-size-lg: calc(20 * var(--to-rem));
+  --font-size-xl: calc(24 * var(--to-rem));
+  --font-size-2xl: clamp(24 * var(--to-rem), 1.3239rem + 0.7512vi, 32 * var(--to-rem));
+  --font-size-3xl: clamp(32 * var(--to-rem), 1.8239rem + 0.7512vi, 40 * var(--to-rem));
 
   /* Space */
-  --space-md: clamp(16 * var(--torem), 0.6479rem + 1.5023vi, 32 * var(--torem));
-  --space-lg: clamp(24 * var(--torem), 0.9718rem + 2.2535vi, 48 * var(--torem));
+  --space-md: clamp(16 * var(--to-rem), 0.6479rem + 1.5023vi, 32 * var(--to-rem));
+  --space-lg: clamp(24 * var(--to-rem), 0.9718rem + 2.2535vi, 48 * var(--to-rem));
 
   /* Offset */
   --offset-sm: 5vi;
@@ -26,10 +26,15 @@
   --offset-lg: 15vi;
 }
 
+/* General */
 :where(html) {
   font-family: var(--font-sans);
   color: var(--color-light);
   background-color: var(--color-dark);
+}
+
+:where(p) {
+  margin-block: 2em;
 }
 
 /* Header */
@@ -224,11 +229,7 @@
   background-color: var(--color-light);
 
   span {
-    font-size: clamp(24 * var(--torem), 0.5rem + 6.6667cqi, 40 * var(--torem));
+    font-size: clamp(24 * var(--to-rem), 0.5rem + 6.6667cqi, 40 * var(--to-rem));
     font-weight: 900;
   }
-}
-
-:where(p) {
-  margin-block: 2em;
 }

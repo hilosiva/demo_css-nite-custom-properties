@@ -8,6 +8,7 @@
   --font-sans: "Inter", sans-serif;
 }
 
+/* General */
 :where(html) {
   font-family: var(--font-sans);
   color: var(--color-light);
