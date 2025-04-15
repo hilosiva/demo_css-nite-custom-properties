@@ -1,0 +1,24 @@
+/* Container */
+.container {
+  --container-offset: var(--offset-md);
+
+  padding-inline: var(--container-offset);
+
+  &[data-offset="small"] {
+    --container-offset: var(--offset-sm);
+  }
+  &[data-offset="medium"] {
+    --container-offset: var(--offset-md);
+  }
+  &[data-offset="large"] {
+    --container-offset: var(--offset-lg);
+  }
+}
+
+.container-over-start {
+  margin-inline-start: calc(-1 * var(--container-offset));
+}
+
+.container-over-end {
+  margin-inline-end: calc(-1 * var(--container-offset));
+}

@@ -1,0 +1,15 @@
+/* Section */
+.section {
+  margin-block-start: var(--space-lg);
+}
+
+.section-cover {
+  margin-inline: calc(-1 * var(--container-offset));
+  aspect-ratio: 1.618 / 1;
+
+  img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+}

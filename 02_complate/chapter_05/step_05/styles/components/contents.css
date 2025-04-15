@@ -1,0 +1,10 @@
+/* Contents */
+.contents {
+  display: block grid;
+  row-gap: var(--space-md);
+  margin-block-start: var(--space-md);
+}
+
+.contents-title {
+  font-size: var(--font-size-2xl);
+}

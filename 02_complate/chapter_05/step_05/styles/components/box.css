@@ -1,0 +1,14 @@
+/* Box */
+.box {
+  container: box / inline-size;
+  display: block grid;
+  place-content: center;
+  aspect-ratio: 1;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+
+  span {
+    font-size: clamp(24 * var(--to-rem), 0.5rem + 6.6667cqi, 40 * var(--to-rem));
+    font-weight: 900;
+  }
+}
