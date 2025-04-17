@@ -146,12 +146,12 @@
   display: block var(--content-display, flow);
   gap: var(--content-gap, 2.5cqi);
 
-  @container style( --content-type: "card") {
+  @container style(--content-type: "card") {
     --content-display: grid;
     grid-template: "cover" auto "title" auto "text" 1fr / 1fr;
   }
 
-  @container style( --content-type: "media") {
+  @container style(--content-type: "media") {
     --content-display: grid;
     grid-template:
       "cover title" auto
