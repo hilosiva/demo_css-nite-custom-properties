@@ -65,11 +65,7 @@
 .container {
   --container-offset: var(--offset-md);
 
-  padding-inline: var(--container-offset);
-
-  &[data-offset] {
-    --container-offset: attr(data-offset vi, 0);
-  }
+  padding-inline: attr(data-offset vi, var(--container-offset));
 }
 
 .container-over-start {
